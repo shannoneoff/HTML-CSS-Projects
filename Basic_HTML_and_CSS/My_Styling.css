@@ -1,0 +1,18 @@
+<style>
+	.My_Styling 
+	
+	body {
+		background-color: AliceBlue;
+	}
+
+	h1 {
+		color: FireBrick;
+	}
+
+	p {
+		color: MidnightBlue;
+		text-decoration: green wavy underline;
+		font-weight: bolder;
+		font-size: medium;
+	}
+</style>
