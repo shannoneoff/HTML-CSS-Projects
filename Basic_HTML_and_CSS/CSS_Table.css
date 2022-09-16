@@ -1,0 +1,24 @@
+h1 {
+	font-family: Regina Black Solid, fantasy;
+}
+
+table {
+	border: 3px #dd9d48;
+	font-family: Raleway, sans-serif;
+}
+
+td:hover {
+	background-color: #8CC587;
+	color: black;
+}
+
+tr, th {
+	font-family: Raleway Extra Bold, sans-serif;
+	background-color: #5b3483;
+	color: 5b3483;
+}
+
+tr, td {
+	background-color: black;
+	color: #8CC587;
+}
