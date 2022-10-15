@@ -25,7 +25,7 @@ Features:
 Features:
 - Just what it sounds like: Effecting images sourced in HTML with CSS styling
 
-## **[One-Page Website](One-Page Website)**
+## **[One-Page-Website](One-Page-Website)**
 Features:
 - Utilizing sections and divs in HTML
 - Navigation bars
@@ -35,7 +35,7 @@ Features:
 - Using RGB/RGBA color codes
 - Contact form with placeholders
 
-## **[Yard Site Project](Yard Site Project)**
+## **[Yard-Site-Project](Yard-Site-Project)**
 Features:
 - Photo containers and overlays
 - Inserting a form
