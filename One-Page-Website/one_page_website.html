@@ -3,7 +3,9 @@
 	<head>
 		<title>Cross-Country in A Tesla</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">
+		<script src="./JS/one_page_website.js" defer></script>
 	</head>
 	<body>
 		
@@ -12,7 +14,7 @@
 			<div>	
 				<ul>
 					<a href="#content"><li>ABOUT</li></a>
-					<a href="#gallery"><li>PHOTOS</li></a>
+					<a href="#photos"><li>PHOTOS</li></a>
 					<a href="#videos"><li>VIDEOS</li></a>
 					<a href="#contact"><li>FEEDBACK</li></a>
 				</ul>
@@ -20,125 +22,151 @@
 		</div>
 		<!-- END NAV -->
 		
-		<main>
-			<!-- CONTENT -->
+		<br>
+		<br>
+
+		<!-- CONTENT -->
+		<section>
 			<div id="content">
 				<h1>About</h1>
 				<p>Last year, I took a cross-country road trip in my electric car, a blue Tesla Model Y.  These were my adventures...</p>
 			</div>
-			<!-- END CONTENT -->
-		</main>
+		</section>
+		<!-- END CONTENT -->
 		
 		<!-- GALLERY -->
 		<section>
-			<div id="gallery">
+			<div id="photos">
 				<h1>Photos</h1>
 				<div>
+					
+					<!-- LIGHTBOX -->
+					<!-- THUMBNAILS -->
+					<div class="row">
+						<div class="column">
+							<img src="./Images/thumbs/thumb_1.jpg" style="width: 100%" onclick="openModal();currentSlide(1)"
+								class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/thumbs/thumb_2.jpg" style="width: 100%" onclick="openModal();currentSlide(2)"
+								class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/thumbs/thumb_3.jpg" style="width: 100%" onclick="openModal();currentSlide(3)"
+								class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/thumbs/thumb_4.jpg" style="width: 100%" onclick="openModal();currentSlide(4)"
+								class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/thumbs/thumb_5.jpg" style="width: 100%" onclick="openModal();currentSlide(5)"
+								class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/thumbs/thumb_6.jpg" style="width: 100%" onclick="openModal();currentSlide(6)"
+								class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/thumbs/thumb_7.jpg" style="width: 100%" onclick="openModal();currentSlide(7)"
+								class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/thumbs/thumb_8.jpg" style="width: 100%" onclick="openModal();currentSlide(8)"
+								class="hover-shadow cursor">
+						</div>
+					</div>
+					
+					<!-- FULL SIZE PHOTOS -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+
+							<div class="mySlides">
+								<div class="numbertext">1 / 8</div>
+								<img src="./Images/fire_sunset_hwy.jpg" style="width: 100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">2 / 8</div>
+								<img src="./Images/Friend_sign.jpg" style="width: 100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">3 / 8</div>
+								<img src="./Images/industrial_view.jpg" style="width: 100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">4 / 8</div>
+								<img src="./Images/misty_clouds.jpg" style="width: 100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">5 / 8</div>
+								<img src="./Images/sunset_industrial.jpg" style="width: 100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">6 / 8</div>
+								<img src="./Images/wy_hills_sky.jpg" style="width: 100%">
+							</div>
+							
+							<div class="mySlides">
+								<div class="numbertext">7 / 8</div>
+								<img src="./Images/wy_pastures.jpg" style="width: 100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">8 / 8</div>
+								<img src="./Images/York_balloon.jpg" style="width: 100%">
+							</div>
+
+							<!-- PREVIOUS AND NEXT BUTTONS -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+
+						<!-- CAPTION CONTAINER -->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_1.jpg" style="width: 100%" onclick="currentSlide(1)" 
+								alt="Fire Sunset Sky">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_2.jpg" style="width: 100%" onclick="currentSlide(1)"
+								alt="Friend city sign">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_3.jpg" style="width: 100%" onclick="currentSlide(1)"
+								alt="Light sunset sky with industrial buildings">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_4.jpg" style="width: 100%" onclick="currentSlide(1)"
+								alt="Misty clouds and sun">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_5.jpg" style="width: 100%" onclick="currentSlide(1)"
+								alt="Rural Sunset">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_6.jpg" style="width: 100%" onclick="currentSlide(1)"
+								alt="Big Sky in Wyoming">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_7.jpg" style="width: 100%" onclick="currentSlide(1)"
+								alt="Sheep and Cows in Wyoming fields">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="./Images/thumbs/thumb_8.jpg" style="width: 100%" onclick="currentSlide(1)"
+								alt="York town balloon">
+						</div>
+					</div>
+					<!-- END LIGHTBOX -->
 				
-					<!-- PHOTO-CONTAINER 1 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_1.jpg" alt="Fire Sunset Sky">
-								<div>
-									<h6>
-									<p>Sky of a fire-colored sunset</p>
-									</h6>
-								</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 1 -->
-					
-					<!-- PHOTO-CONTAINER 2 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_2.jpg" alt="Friend city sign">
-							<div>
-								<h6>
-								<p>A town called Friend</p>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 2 -->
-					
-					<!-- PHOTO-CONTAINER 3 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_3.jpg" alt="Light sunset sky with industrial buildings">
-							<div>
-								<h6>
-								<p>Pastel sky with rural industrial buildings in the foreground</p>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 3 -->
-					
-					<!-- PHOTO-CONTAINER 4 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_4.jpg" alt="Misty clouds and sun">
-							<div>
-								<h6>
-								<p>Misty clouds with sun behind</p>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 4 -->
-					
-					<!-- PHOTO-CONTAINER 5 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_5.jpg" alt="Rural Sunset">
-							<div>
-								<h6>
-								<p>Sunset over pastures</p>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 5 -->
-					
-					<!-- PHOTO-CONTAINER 6 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_6.jpg" alt="Big Sky in Wyoming">
-							<div>
-								<h6>
-								<p>Big sky with low clouds in mountains of Wyoming</p>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 6 -->
-					
-					<!-- PHOTO-CONTAINER 7 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_7.jpg" alt="Sheep and Cows in Wyoming fields">
-							<div>
-								<h6>
-								<p>Pastures in Wyoming with sheep and cow herds</p>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 7 -->
-					
-					<!-- PHOTO-CONTAINER 8 -->
-					<div>
-						<div>
-							<img src="./Images/thumbs/thumb_8.jpg" alt="York town balloon">
-							<div>
-								<h6>
-								<p>Huge "hot air balloon" in town called York</p>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 8 -->
-					
 				</div>
 			</div>
 		</section>
