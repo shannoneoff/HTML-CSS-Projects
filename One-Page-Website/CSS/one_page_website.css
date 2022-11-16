@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+section {
+    display: inline-block;
+}
+
 a {
     display: inline-block;
     width: 100px;
@@ -146,14 +150,97 @@ img.hover-shadow {
 }
 
 .feedback {
-    width: 10%;
+    width: 60%;
     margin: 4px 2px;
     border: 2px solid rgba(0, 100, 55, 20);
     border-radius: 4px;
+}
+
+.email {
+    width: 300px;
+}
+
+.content {
+    width: 650px;
+    height: 60px;
 }
 
 .feedback::placeholder {
     font-weight: 200;
     opacity: .5;
     color: grey;
+}
+
+/* Sticky Contact button */
+#button {
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity: 0.9;
+    width: 280px;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(244, 244, 32);
+    color: darkblue;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Pop-up form */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Form container styles */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+/* Full-width input fields */
+.form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Action when inputs get focus */
+.form-container input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Submit button style */
+.form-container .btn {
+    background-color: #04820c;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Cancel button style */
+.form-container .cancel {
+    background-color: rgb(166, 3, 3);
+}
+
+/* Buttons hover effect */
+.form-container .btn:hover, .sticky:hover {
+    opacity: 1;
 }

@@ -34,3 +34,29 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+function validateForm() {
+    let x = document.forms["myForm"]["fullname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    let y = document.forms["myForm"]["email"].value;
+    if (y == "") {
+        alert("Email Address must be filled out");
+        return false;
+    }
+    let z = document.forms["myForm"]["content"].value;
+    if (z == "") {
+        alert("You forgot to give your feedback.  Try again!");
+        return false;
+    }
+}
+
+function openForm() {
+    document.getElementById("stickyForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("stickyForm").style.display = "none";
+}

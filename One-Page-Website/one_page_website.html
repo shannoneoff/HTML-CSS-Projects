@@ -31,6 +31,8 @@
 				<h1>About</h1>
 				<p>Last year, I took a cross-country road trip in my electric car, a blue Tesla Model Y.  These were my adventures...</p>
 			</div>
+
+			
 		</section>
 		<!-- END CONTENT -->
 		
@@ -234,10 +236,11 @@
 							Please let us know which photo and which video were your favorites.
 						</p>
 						<div>
-							<form action="" method="post">
-								<input class="feedback" type="text" value="" placeholder="Your Name">
-								<input class="feedback" type="text" value="" placeholder="Email Address">
-								<input class="feedback" type="text" value="" placeholder="Photo 1, etc.">
+							<form name="myForm" class="feedback" action="/action_page.php" onsubmit="return validateForm()" method="post">
+								<input name="fullname" class="fullname" type="text" value="" placeholder="Your Name">
+								<input name="email" class="email" type="email" value="" placeholder="Email Address">
+								<input name="phone" class="phone" type="text" value="" placeholder="Phone Number">
+								<input name="content" class="content" type="text" value="" placeholder="Photo 1, etc.">
 								<div>
 									<input type="submit" value="Submit">
 								</div>
@@ -248,12 +251,29 @@
 			</div>
 		</section>
 		<!-- END FEEDBACK -->
+
+		<!-- STICKY CONTACT FORM BUTTON -->
+		<button class="sticky" onclick="openForm()">Contact</button>
+		<!-- END STICKY BUTTON-->
 		
-		<!-- FOOTER -->
-		<div>
-			<br>
-			www.crosscountrytrip.trip &nbsp;|&nbsp; &copy; Shannon Eoff 2022
+		<!-- STICKY CONTACT FORM -->
+		<div class="form-popup" id="stickyForm">
+			<form action="/action_page.php" class="form-container">
+				<label for="fullname"><b>Name</b></label>
+				<input type="text" placeholder="Your Name" name="fullname" required>
+		
+				<label for="email"><b>Email</b></label>
+				<input type="email" placeholder="Email Address" name="email" required>
+		
+				<button type="submit" class="btn">Submit</button>
+				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			</form>
 		</div>
-		<!-- END FOOTER -->
+		<!-- END STICKY CONTACT FORM -->
+
 	</body>
+
+	<footer>
+		www.crosscountrytrip.trip &nbsp;|&nbsp; &copy; Shannon Eoff 2022
+	</footer>
 </html>
